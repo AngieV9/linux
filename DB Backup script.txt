@@ -1,0 +1,14 @@
+ServerOne
+
+#!/bin/bash
+
+#BackupScript.sh
+
+#Back up MariaDB databases using mysqldump 
+
+mysqldump -uroot Group2 > /home/vagrant/backup/backupdb.sql
+if [ $? -eq 0 ]; then
+  echo "Command Succeeded and backup.sql was created!"
+else
+  echo "Command Failed!"
+fi

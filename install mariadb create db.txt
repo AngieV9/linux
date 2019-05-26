@@ -1,0 +1,35 @@
+ServerOne:
+
+Install mariadb
+
+~$ sudo yum -y install mariadb-server
+~$ sudo systemctl start mariadb
+~$ sudo systemctl enable mariadb
+~$ mysql_secure_installation
+
+(root password -no)
+
+Next connect to MariaDB
+~$ mysql -u root 
+
+Create Database:
+>CREATE DATABASE Group2;
+
+View all Databases:
+>SHOW DATABASES:
+
+Go inside Group2 database:
+>USE Group2;
+
+Create a table called amd_intern:
+>CREATE TABLE amd_intern(id INT, name VARCHAR(20), address VARCHAR(20));
+
+Check the table created:
+>SHOW TABLES;
+
+Add data to amd_intern table:
+>INSERT INTO amd_intern(id,name,address) VALUES(1,"Angie","Tirane");
+>INSERT INTO amd_intern(id,name,address) VALUES(2,"Ada","Tirane");
+
+View the information added to the table:
+>SELECT * FROM amd_intern;
